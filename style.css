@@ -1,0 +1,105 @@
+/*styles the entire webpage*/
+body {
+    background-color: antiquewhite;
+    /* sets the page background to a certian colour */
+    font-family: Arial, Helvetica, sans-serif;
+    /* says what fonts will be used */
+    display: flex;
+    /* enables a flexbox to help position the birthday card */
+    justify-content: center;
+    /* centers the card horizontally */
+    align-items: center;
+    /* centers the card vertically */
+    min-height: 100vh;
+    /* makes the page as tall as the browser window */
+    margin: 0;
+    /* removes the default margin around the page */
+}
+/* styles the main birthday card */
+.birthday-card {
+    background-color: beige;
+     /* sets the page background to a certian colour */
+    width: 320px;
+    /* set the width of the card's content */
+    padding: 25px;
+    /* adds space between the content and the card's edges */
+    text-align: center;
+    /* centers the text inside the card */
+    border: 2px solid #eee7e7;
+    /* adds a thin solid border around the card in a specific colour */
+    border-radius: 15px;
+    /* rounds the corners of the card */
+    box-shadow: 0 5px 20px #d1cdcd;
+    /* adds a shadow behind the card */
+}
+/* styles the flower image */
+.flowers {
+    width: 100%;
+    /* makes the image fit the available card width */
+    height: 100%;
+    /* makes the image fit the available card height */
+    object-fit: cover;
+    /* crops the image neatly without stretching it */
+    border-radius: 10px;
+    /* rounds off the corners of the image */   
+    display: block;
+    /* makes the image behave as a block element which helps remove the small default gap that can appear underneath inline images */
+    margin-bottom: 0;
+    /* removes any extra space below the image */
+}
+/* styles the small introduction text above the heading */
+.small-text {
+    color: #b76e79;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* styles the main birthday heading */
+h1 {
+    color:#a84d65;
+    font-size: 30px;
+    font-weight: bold;
+}
+/* styles the main birthday message underneath the heading */
+.message {
+    color:#70565c;
+    font-size: 14px;
+    line-height: 1.8;
+}
+/* styles the closing signature */
+.signature {
+    font-style: italic;
+    color:#b76e79;
+    margin-top: 25px;
+}
+/* confetti container will cover the whole screen */
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1000;
+}
+/* styles each peice of confetti */
+.confetti {
+    position: absolute;
+    top: -15px;
+    width: 8px;
+    height: 12px;
+    opacity: 0.9;
+    animation: confetti-fall linear forwards;
+}
+
+/* makes the confetti fall and spin */
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+    }
+}

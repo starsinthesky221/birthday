@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--tells the browser that this code is using html5.-->
+<html lang="en">
+    <!--tells the browser the page is in english.-->
+    <head>
+        <!--contains information about the webpage that isn't displayed in the main content of the page.-->
+        <meta charset="UTF-8">
+        <!--allows the page to display standard text and symbols and characters-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--makes the page scale properly on mobile, tablets and computers.-->
+        <title>HAPPY BIRTHDAY!!</title>
+        <!--the title shown in the browser tab.-->
+        <link rel="stylesheet" href="style.css">
+        <!--conntexts the html file to an external css file (stylesheet); make sure both are in the same folder.-->
+    </head>
+
+    <body>
+<!--contains everything that will appear on the webpage.-->
+
+        <div class="confetti-container" aria-hidden="true"></div>
+        <!--confetti animation container-->
+        <div class="birthday-card">
+            <!--creates the main birthday card container; also helps the css style the entire card.-->
+            <img
+            src="images/yellowflowers.png"
+            alt="beautiful yellow flowers"  
+            class="flowers">
+            <!--displays the flower image; src is the URL of the image; alt stands for alt text and it describes the image for screen readers and appears if image cannot load; class="flowers" allows css to style the image.-->   
+
+        <p class="small-text">A SPECIAL DAY FOR A SPECIAL PERSON</p>
+        <!--a small introduction line above the main heading; allows us to change the font, colour, letter spacing and the margins in css.-->
+
+        <h1>HAPPY BIRTHDAY!!</h1>
+        <!--main heading of the birthday card; h1 is the primary heading on a webpage.-->
+
+        <p class="message">
+            Thank you for being there for me and raising me.
+            I hope your day is filled with happiness, memories
+            and much much more positive stuff. I love you so much and I'm glad you're recovering well from surgery. xx
+        </p>
+        <!--main birthday message that will be displayed; class="message" means we can customise it in css.-->
+
+        <p class="signature">Lots of love, Starry xx</p>
+        <!--closing line/signature at the bottom of the card.-->
+        </div>
+
+        <script src="confetti.js"></script>
+        <!--closes the main birthday card container.-->
+    </body>
+    <!--closes the visible webpage content.-->
+</html>
